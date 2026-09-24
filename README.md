@@ -1,6 +1,10 @@
 # Kubernetes Platform App
 
-Stateless, production-ready REST API built with Node.js & Express, instrumented with Prometheus observability and packaged for Kubernetes deployment via GitOps.
+> 🔗 **Part of the [Enterprise Kubernetes Platform Engineering Ecosystem](https://github.com/PandaVerse09/kubernetes-platform-gitops)**  
+> • GitOps Control Plane: [kubernetes-platform-gitops](https://github.com/PandaVerse09/kubernetes-platform-gitops)  
+> • Cloud Infrastructure: [kubernetes-platform-infra](https://github.com/PandaVerse09/kubernetes-platform-infra)
+
+Stateless, production-ready microservice built with Node.js & Express, instrumented with Prometheus observability and packaged for Kubernetes deployment via GitOps.
 
 ## Features
 - **Health Probes:** Dedicated `/health` (Liveness) and `/ready` (Readiness) endpoints.
