@@ -28,6 +28,22 @@ describe('API Health and Observability Endpoints', () => {
     expect(res.body.name).toBe('kubernetes-platform-app');
     expect(res.body.version).toBeDefined();
   });
+
+  it('GET / returns 200 and HTML dashboard', async () => {
+    const res = await request(app).get('/');
+    expect(res.statusCode).toBe(200);
+    expect(res.headers['content-type']).toContain('text/html');
+    expect(res.text).toContain('Kubernetes Platform');
+  });
+
+  it('GET / with Accept: application/json returns system summary JSON', async () => {
+    const res = await request(app)
+      .get('/')
+      .set('Accept', 'application/json');
+    expect(res.statusCode).toBe(200);
+    expect(res.body.status).toBe('online');
+    expect(res.body.name).toBe('kubernetes-platform-app');
+  });
 });
 
 describe('CRUD Operations (/api/v1/todos)', () => {
