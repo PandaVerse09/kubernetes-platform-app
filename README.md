@@ -6,6 +6,8 @@
 
 Stateless, production-ready microservice built with Node.js & Express, instrumented with Prometheus observability and packaged for Kubernetes deployment via GitOps.
 
+![Application Platform Dashboard](docs/images/app-platform-dashboard.png)
+
 ## Features
 - **Health Probes:** Dedicated `/health` (Liveness) and `/ready` (Readiness) endpoints.
 - **Prometheus Observability:** Native `/metrics` endpoint exposing default Node.js runtime metrics and custom HTTP request duration/counter metrics (RED method).
